@@ -680,6 +680,7 @@ main.drake-main {
     border-radius: 30px;
     display: block;
     margin-bottom: 56px;
+    width: 100%;
 }
 .left-sidebar .sidebar-header {
     margin-bottom: 65px;
