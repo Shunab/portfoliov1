@@ -232,7 +232,7 @@ main.drake-main {
     /* padding: 10px 10px; */
     width: 55px;
     transition: .3s;
-    color: #999999;
+    color: #fff;
     cursor: pointer;
 }
 .menu li a.active,
@@ -1121,6 +1121,11 @@ body .body-overlay {
     z-index: 100;
     overflow-y: auto;
     border-radius: 20px;
+    color: #000;
+}
+
+.portfolio-tools li span {
+    color: white; /* Set text color to white */
 }
 
 

@@ -443,9 +443,9 @@
                                             </ul>
 
                                             <ul class="portfolio-tools">
-                                                <li><div>React</div></li>
-                                                <li><span>HTML</span></li>
-                                                <li><span>CSS</span></li>
+                                                <li><span style="color: black;">React</span></li>
+                                                <li><span style="color: black;" >HTML</span></li>
+                                                <li><span style="color: black;">CSS</span></li>
                                                 
                                             </ul>
                                             <div class="project-description" style="display: none;">
@@ -696,6 +696,12 @@
                 });
             });
         });
+
+        document.getElementById('yourVideoElementId').addEventListener('touchstart', function(e) {
+    e.preventDefault();
+}, { passive: false });
+
+
         </script>
         
         
