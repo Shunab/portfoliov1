@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blindfold Chess</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/images/black.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../assets/css/animate.min.css">
+  <link rel="stylesheet" href="../assets/css/smooth-scrollbar.css">
+  <link rel="stylesheet" href="../assets/css/lightbox.min.css">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/project.css">
+</head>
+<body class="home1-page">
+  <div class="wrapper">
+    <!-- Hero Section -->
+    <img class="hero" src="../assets/images/portfolio1.png" alt="Project Hero">
+
+    <!-- Main Content Section -->
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <a href="../index.html#portfolio" class="back-btn">← Back to Portfolio</a>
+      
+        <div class="sidebar-box">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="https://github.com/Shunab/learnblindchess" target="_blank">GitHub Repo</a></li>
+            <li><a href="https://learnblindchess.com/index" target="_blank">Live Demo</a></li>
+          </ul>
+        </div>
+      
+        <div class="sidebar-box">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+                <a href="#learn-blind-chess"> Overview</a>
+                <ul>
+                  <li><a href="#the-problem">The Problem</a></li>
+                  <li><a href="#the-solution">The Solution</a></li>
+                  <li><a href="#market-context">Market Context</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#features">Features</a>
+                
+              </li>
+              <li><a href="#tech">Tech Stack</a></li>
+              <li>
+                <a href="#challenges">Challenges</a>
+                <ul>
+                  <li><a href="#speech-recognition">Speech Recognition</a></li>
+                  <li><a href="#chessboard-css">CSS Hell</a></li>
+                  <li><a href="#array-logic">Array Logic</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#how-to-play">How to Play</a>
+                <ul>
+                  <li><a href="#getting-started">Getting Started</a></li>
+                  <li><a href="#playing-the-game">Playing the Game</a></li>
+                  <li><a href="#challenge">Challenges</a></li>
+                  <li><a href="#accessibility">Accessibility</a></li>
+                  <li><a href="#feedback">Feedback</a></li>
+                 
+                </ul>
+              </li>
+          </ul>
+        </div>
+      </div>
+      
+
+      <!-- Content -->
+      <div class="content">
+        <h2 id="overview">Overview</h2>
+        <p>
+            An interactive app designed to teach blindfold chess, enhance mental visualization skills through voice commands or clicks. Built with React.js and integrating Speech Recognition API, it allows users to navigate chess pieces across a board without seeing them, offering various game modes, challenges, and customizable settings for a tailored learning experience.
+        </p>
+
+        <h3 id="the-problem">The Problem: A Skill Gap in Chess Training</h3>
+        <p>
+        Blindfold chess is a remarkable skill. It’s used by grandmasters to sharpen mental visualization, deepen board awareness, and train the brain to process positions without sight. But learning it? Most methods are either too basic like <strong>"just memorize square colors"</strong> and straight into playing full games with no transition.
+        </p>
+        <p>
+        There’s a critical missing step: <strong>how do you learn to <em>navigate</em> the board mentally, not just recognize it?</strong> This gap is exactly what <em>Learn Blind Chess</em> was built to solve.
+        </p>
+
+        <h3 id="the-solution">Bridging the Gap: A Tool for Real Progress</h3>
+        <p>
+        <em>Learn Blind Chess</em> isn’t a game. It’s an <strong>interactive training tool</strong> that builds the core muscle of blindfold chess: <strong>navigating pieces without sight</strong>. By stripping away distractions—no multiple pieces, no enemy threats—it teaches you to mentally simulate moves one at a time, starting from any square, with any piece.
+        </p>
+        <p>
+        It's not just for future blindfold players either. Beginners struggling with piece movement or board orientation can use this to <strong>internalize how chess works</strong> from the ground up.
+        </p>
+        <p>
+        Unlike traditional training platforms, <em>Learn Blind Chess</em> focuses on:
+        </p>
+        <ul>
+        <li><strong>Piece-based training</strong>, not full games</li>
+        <li><strong>Progressive visibility controls</strong> (hide coordinates → piece → full board)</li>
+        <li><strong>Real-time voice feedback</strong> to simulate blindfold conditions</li>
+        </ul>
+        <p>
+        It turns mental training into something tangible, measurable, and honestly—addictive.
+        </p>
+
+        <h3 id="market-context">The Market Context</h2>
+        <p>
+        Most chess training platforms—like Chess.com, Lichess, or Aimchess—focus on improving practical gameplay: tactics, puzzles, openings. Very few, if any, isolate the <strong>cognitive skill of board visualization</strong> in a structured, progressive way.
+        </p>
+        <p>
+        Blindfold chess is traditionally treated as an "elite" skill. That mindset creates friction for learners. <em>Learn Blind Chess</em> aims to <strong>democratize visualization training</strong>, much like how Duolingo demystified language learning.
+        </p>
+        <p>
+        There's an open space here: <strong>a supplementary training tool</strong> that's simple, hyper-focused, and rooted in deliberate practice.
+        </p>
+
+        <h2 id="Features">Features</h2>
+        <h3 id="product-highlights">Product Highlights</h3>
+        <ul>
+        <li>🧩 <strong>Piece Trainer</strong>: Pick a piece, start from anywhere, and navigate by naming your destination. If it’s valid, you’ll hear it confirmed. If not, you’ll hear “Invalid move.”</li>
+        <li>🎯 <strong>Dynamic Challenges</strong>: Move your Knight from A1 to H8. Reach a corner in minimal moves. All challenge routes are generated on the fly.</li>
+        <li>🎙️ <strong>Voice-Activated Play</strong>: Use your mic to give commands like “E4” or simply click—ideal for accessibility and immersion.</li>
+        <li>👁️ <strong>Adaptive Difficulty</strong>: Gradually remove coordinates, the piece, and the board to train full blindfold play.</li>
+        <li>🔊 <strong>Real-Time Audio</strong>: Feedback is instant, helping reinforce board position purely by listening.</li>
+        </ul>
+
+        <h2 id="tech">The Tech Behind It</h2>
+        <p>
+        This is a <strong>React.js SPA</strong> that uses:
+        </p>
+        <ul>
+        <li><strong>Web Speech API</strong>: For real-time voice recognition and move parsing</li>
+        <li><strong>Custom board engine</strong>: Built from scratch (no third-party chess libraries) to handle one-piece logic</li>
+        <li><strong>Dynamic challenge engine</strong>: Procedurally generates movement challenges based on selected patterns</li>
+        <li><strong>Progressive UI controls</strong>: Toggles for board visibility, coordinate display, and piece presence</li>
+        </ul>
+        <p>
+        It’s fully responsive and designed to work across devices, with a clean minimal UI that mimics the focus required for blindfold training.
+        </p>
+
+        <h2 id="challenges">Challenges & What You Learned</h2>
+
+        <p>
+          This was the first project I built after learning JavaScript and React. I didn’t want to follow the crowd and make just another landing page or to-do list. I wanted to create something <strong>new, creative, and relevant</strong>—something that could actually fill a gap.
+        </p>
+        
+        <p>
+          The project wasn’t planned from the start. It began as a simple chessboard with a single piece. But as I kept building, more ideas came up—features that would make it more complete, more useful. Every time I added something new, I had to rethink and <strong>restructure the project architecture</strong> on the fly. It was messy, but it forced me to understand component logic, state management, and reusability at a deeper level.
+        </p>
+        
+        <h3 id="speech-recognition">1. Getting Voice Input Right</h3>
+        <p>
+          The only external library used was for speech recognition, and even that came with its own set of problems. Recognizing coordinates consistently, handling accents, and managing noise was harder than expected. Making the voice system reliable and smooth was a huge learning curve—and a major reason the project feels immersive today.
+        </p>
+        
+        <h3 id="chessboard-css">2. CSS Hell</h3>
+        <p>
+          Dynamically generating the chessboard came with a price: <strong>CSS responsiveness was a hassle</strong>. Every square needed to adapt perfectly across screen sizes without breaking alignment. I had to rework styles multiple times just to maintain basic usability on mobile.
+        </p>
+        
+        <h3 id="array-logic">3. Building Chess Logic from Scratch</h3>
+        <p>
+          Instead of using a chess library, I wrote my own logic for each piece’s movement. That forced me to learn <strong>array manipulations, index math, and board mapping</strong> in a very hands-on way. It was frustrating at first, but genuinely fun once things started clicking.
+        </p>
+        
+        <p>
+          The whole project took around a week. It taught me how to manage scope, refactor rapidly, and think both like a developer and a product designer. Looking back, it was the perfect first real project—and a reminder that building something original always teaches more than following tutorials.
+        </p>
+        
+        
+        <h2 id="how-to-play">How to Play</h2>
+            <p>This is an interactive tool designed to teach blindfold chess, created with React JS. It improves your mental visualization by navigating pieces on the board.
+                Most blindfold courses focus on teaching you to identify the colour of each square and then expect you to start playing games blindfold, leaving a gap in between in your learning process. I made this application to bridge that gap by helping you learn to navigate the pieces. It's also useful for beginners (not just those interested in blindfold chess) to gain a better understanding of how the pieces move.</p>
+
+            <h3 id="getting-started">Getting Started</h3>
+            <ol>
+                <li><strong>Open the app:</strong> Visit the homepage and choose a piece to practice with (Knight, Bishop, Rook, Queen).</li>
+                <li><strong>Set your board:</strong> We use a traditional board. You can choose to display coordinates if you wish, or even hide the board.</li>
+            </ol>
+
+            <h3 id="playing-the-game">Playing the Game</h3>
+            <ol>
+                <li><strong>Moving pieces:</strong>Unlike traditional chess there is only one piece on the board, simply say the coordinate of the square you want your piece to move to. For example, just say "F3" ad your piece will move accordingly.</li>
+                <li><strong>Listen to the app:</strong>  If you attempt to move your piece to an invalid square, you will hear "invalid move" and for valid moves, you will hear the move like "Knight to F3." </li>
+                <li><strong>Visualize your moves:</strong> As you keep playing try to visualize your moves, customize your settings to progressively hide the coordinates, the piece and then the board. </li>
+            </ol>
+
+            <h3 id="challenge">Challenges</h3>
+            <ol>
+                <li><strong>Start a Challenge:</strong>From the sidebar, select one of the four available challenges. All challenges are dynamically generated and each of the four options represent the type of challenge, like moving from corner to corner or to an adjacent square.</li>
+                <li><strong>Challenge description: </strong> Once you select a challenge, the app provides you an instruction by voice and also displays the challenge in text in the challenge section.</li>
+                <li><strong>Complete the challenge:</strong> Take as much time or as many moves required to finish your challenge. Although you are not expected to finish the challenge in a certain number of moves, attempt to find the shortest path possible.</li>
+            </ol>
+
+            <h3 id="accessibility">Accessibility and Assistance</h3>
+            <ul>
+                <li><strong>Voice or Clicks:</strong> You can play using voice commands or by clicking on the board if you prefer.</li>
+                <li><strong>Piece Visibility Slider:</strong> Adjust the visibility of your piece on the board to increase the challenge as you improve.</li>
+                <li><strong>Audio Settings:</strong> You have the option to mute/unmute and enable/disable sound effects based on your preference.</li>
+            </ul>
+
+            <h3 id="feedback">Feedback and Support</h3>
+            <p>We're constantly looking to improve the app. If you have any suggestions or need help, please don't hesitate to reach out to us at contact@learnblindchess.com.
+                Additionally, our GitHub repository is public, for anyone interested in contributing to this app. Your input and contributions are welcome and greatly appreciated.</p>
+
+            <p>Ready to learn? <a href="https://learnblindchess.com/" class="start-playing">Launch the app</a> and start playing blindfold chess today!</p>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../assets/js/jquery.js"></script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/owl.carousel.js"></script>
+  <script src="../assets/js/gsap.min.js"></script>
+  <script src="../assets/js/ScrollTrigger.min.js"></script>
+  <script src="../assets/js/ScrollToPlugin.min.js"></script>
+  <script src="../assets/js/lightbox.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/ajax-form.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var projectTitles = document.querySelectorAll('.portfolio-item-inner');
+
+      projectTitles.forEach(function(title) {
+        title.addEventListener('click', function() {
+          var description = this.closest('.portfolio-item').querySelector('.project-description');
+          if (description.style.display === 'none' || !description.style.display) {
+            description.style.display = 'block';
+          } else {
+            description.style.display = 'none';
+          }
+        });
+      });
+
+      document.querySelectorAll('.project-description .close-btn').forEach(function(btn) {
+        btn.addEventListener('click', function(event) {
+          event.stopPropagation();
+          this.parentElement.style.display = 'none';
+        });
+      });
+    });
+
+    const video = document.getElementById('yourVideoElementId');
+    if (video) {
+      video.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+      }, { passive: false });
+    }
+  </script>
+</body>
+</html>

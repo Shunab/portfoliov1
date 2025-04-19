@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yeetus</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/images/black.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../assets/css/animate.min.css">
+  <link rel="stylesheet" href="../assets/css/smooth-scrollbar.css">
+  <link rel="stylesheet" href="../assets/css/lightbox.min.css">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/project.css">
+</head>
+<body class="home1-page">
+  <div class="wrapper">
+    <!-- Hero Section -->
+    
+
+    <!-- Main Content Section -->
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <a href="../index.html#portfolio" class="back-btn">← Back to Portfolio</a>
+      
+        <div class="sidebar-box">
+          <h3>Links</h3>
+          <ul>
+            
+            <li><a >No Demo available</a></li>
+          </ul>
+        </div>
+      
+        <div class="sidebar-box">
+            <h3>Contents</h3>
+            <ul>
+              <li><a href="#yeetus">Project Overview</a></li>
+              <li>
+                <a href="#problem">The Problem</a>
+                <ul>
+                  <li><a href="#solution">The Solution</a></li>
+                </ul>
+              </li>
+              <li><a href="#my-role">My Role</a></li>
+              <li>
+                <a href="#features">Key Features</a>
+                <ul>
+                  <li><a href="#smart-analysis">Smart Token Filtering</a></li>
+                  <li><a href="#automated-trading">Automated Trading</a></li>
+                  <li><a href="#wallet-management">Wallet Management</a></li>
+                  <li><a href="#discord-integration">Discord Monitoring</a></li>
+                  <li><a href="#manual-controls">Manual Overrides</a></li>
+                </ul>
+              </li>
+              <li><a href="#tech-architecture">Technical Architecture</a></li>
+              <li><a href="#risk-controls">Risk Management</a></li>
+              <li><a href="#status">Current Status</a></li>
+            </ul>
+          </div>
+          
+          
+      </div>
+      
+
+      <!-- Content -->
+      <div class="content">
+        <h1 id="yeetus">📈 Yeetus — Autonomous Solana Token Trading System</h1>
+
+        <h2 id="problem">The Problem: Manual Token Trading Is Too Slow</h2>
+        <p>
+          The Solana ecosystem sees hundreds of micro-cap token launches daily. Many of them pump briefly, then disappear. Capturing these moves requires <strong>speed, precision, and discipline</strong>—something that manual trading simply can’t offer. Most bots in the space are either too basic or too risky to trust with real capital.
+        </p>
+        <p>
+          Traders need something faster, smarter, and capable of managing trades from start to finish—automatically.
+        </p>
+        
+        <h2 id="solution">The Solution: Yeetus</h2>
+        <p>
+          <strong>Yeetus</strong> is a fully automated, high-frequency Solana trading bot designed to buy and sell newly launched tokens based on <strong>market cap, liquidity depth, volatility, and launch platform</strong>. It integrates with <strong>Raydium</strong>, <strong>Jupiter</strong>, and <strong>Pump.fun</strong> to capture early price movements across the Solana network.
+        </p>
+        <p>
+          Built for speed and backed by practical risk logic, Yeetus is optimized to flip tokens aggressively while minimizing downside exposure.
+        </p>
+        
+        <h2 id="my-role">My Role: Architect & Developer</h2>
+        <p>
+          I designed and built the full system from scratch, writing both the data ingestion pipeline and trading logic. This includes:
+        </p>
+        <ul>
+          <li>Integrating with multiple DEXs and liquidity sources (Raydium, Jupiter, Pump.fun)</li>
+          <li>Developing an analyser module to evaluate token launches and make trade decisions</li>
+          <li>Implementing buy/sell workers, risk management, and transaction retry logic</li>
+          <li>Connecting the entire system to a Discord server for real-time transparency</li>
+        </ul>
+        
+        <h2 id="features">Key Features & Capabilities</h2>
+        
+        <h3 id="smart-analysis">🧠 Smart Token Filtering & Trade Logic</h3>
+        <ul>
+          <li>Scans token launches in real-time</li>
+          <li>Filters tokens based on liquidity, market cap, blacklist status, and risk flags</li>
+          <li>Assigns buy size, stop-loss, and target price dynamically based on token profile</li>
+        </ul>
+        
+        <h3 id="automated-trading">🤖 100% Automated Trading Pipeline</h3>
+        <ul>
+          <li>Auto-buys tokens seconds after launch</li>
+          <li>Executes buys via Raydium, Jupiter, or Pump.fun</li>
+          <li>Auto-sells at price targets or cuts losses below stop thresholds</li>
+          <li>Retry logic if transactions fail (with fallbacks)</li>
+        </ul>
+        
+        <h3 id="wallet-management">👛 Autonomous Wallet Management</h3>
+        <ul>
+          <li>Tracks wallet balance, held tokens, and real-time prices</li>
+          <li>Blacklist system prevents re-buying dumped or flagged tokens</li>
+          <li>Token recovery logic for RPC inconsistencies or dropped tokens</li>
+        </ul>
+        
+        <h3 id="discord-integration">📢 Discord Integration for Monitoring</h3>
+        <ul>
+          <li>Real-time trade logs pushed to Discord (buy, sell, stop-loss)</li>
+          <li>Wallet value updates and status reports via multi-embed messages</li>
+          <li>Supports webhook-based alerting for every critical action</li>
+        </ul>
+        
+        <h3 id="manual-controls">🛑 Emergency Controls & Overrides</h3>
+        <ul>
+          <li>One-click “Sell Everything” function</li>
+          <li>Live trade halts and strategy override on command</li>
+          <li>Adjust trading parameters (risk, size, stop-loss) in real time</li>
+        </ul>
+        
+        <h2 id="tech-architecture">Technical Architecture</h2>
+        <p>
+          Yeetus is structured around two main components:
+        </p>
+        <ol>
+          <li>
+            <strong>Go-based data scraper:</strong> Pulls new token info from multiple sources and publishes to <code>RabbitMQ</code> as JSON.
+          </li>
+          <li>
+            <strong>Python worker system:</strong> Consumes messages, runs analysis, places trades, and monitors position status.
+          </li>
+        </ol>
+        
+        <p>Main tech stack:</p>
+        <ul>
+          <li><strong>Go:</strong> Data collection and message publishing</li>
+          <li><strong>Python:</strong> Trade logic, analysis, and worker orchestration</li>
+          <li><strong>RabbitMQ:</strong> Messaging queue for decoupling modules</li>
+          <li><strong>Discord Webhooks:</strong> Trade monitoring and status reporting</li>
+        </ul>
+        
+        <h2 id="risk-controls">Risk Management</h2>
+        <p>
+          The bot applies multiple safety layers:
+        </p>
+        <ul>
+          <li>Trade size scaling based on liquidity</li>
+          <li>Dynamic stop-loss based on price volatility</li>
+          <li>Blacklist logic and failure tracking</li>
+          <li>Failsafe to halt new trades if losses exceed daily threshold</li>
+        </ul>
+        
+        <h2 id="status">Current Status & Results</h2>
+        <ul>
+          <li>Bot actively trading via Raydium, Jupiter, and Pump.fun</li>
+          <li>Multiple profitable flips on sub-$50 entries reaching 5x+ returns</li>
+          <li>Fully integrated Discord monitor for live ops</li>
+          <li>Fixing occasional 400 errors on Jupiter swap fallback</li>
+        </ul>
+        <p>
+          This project is still in private testing and running daily with manual monitoring. Plans to add a lightweight frontend dashboard are in progress.
+        </p>
+        
+
+     </div>
+
+  <!-- Scripts -->
+  <script src="../assets/js/jquery.js"></script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/owl.carousel.js"></script>
+  <script src="../assets/js/gsap.min.js"></script>
+  <script src="../assets/js/ScrollTrigger.min.js"></script>
+  <script src="../assets/js/ScrollToPlugin.min.js"></script>
+  <script src="../assets/js/lightbox.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/ajax-form.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var projectTitles = document.querySelectorAll('.portfolio-item-inner');
+
+      projectTitles.forEach(function(title) {
+        title.addEventListener('click', function() {
+          var description = this.closest('.portfolio-item').querySelector('.project-description');
+          if (description.style.display === 'none' || !description.style.display) {
+            description.style.display = 'block';
+          } else {
+            description.style.display = 'none';
+          }
+        });
+      });
+
+      document.querySelectorAll('.project-description .close-btn').forEach(function(btn) {
+        btn.addEventListener('click', function(event) {
+          event.stopPropagation();
+          this.parentElement.style.display = 'none';
+        });
+      });
+    });
+
+    const video = document.getElementById('yourVideoElementId');
+    if (video) {
+      video.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+      }, { passive: false });
+    }
+  </script>
+</body>
+</html>

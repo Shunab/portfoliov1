@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sportsbook</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/images/black.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../assets/css/animate.min.css">
+  <link rel="stylesheet" href="../assets/css/smooth-scrollbar.css">
+  <link rel="stylesheet" href="../assets/css/lightbox.min.css">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/project.css">
+</head>
+<body class="home1-page">
+  <div class="wrapper">
+    <!-- Hero Section -->
+    <img class="hero" src="../assets/images/portfolio2.png" alt="Project Hero">
+
+    <!-- Main Content Section -->
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <a href="../index.html#portfolio" class="back-btn">← Back to Portfolio</a>
+      
+        <div class="sidebar-box">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="https://github.com/..." target="_blank">GitHub Repo</a></li>
+            <li><a href="https://..." target="_blank">Live Demo</a></li>
+          </ul>
+        </div>
+      
+        <div class="sidebar-box">
+            <h3>Contents</h3>
+            <ul>
+              <li><a href="#overview">Project Overview</a></li>
+              <li>
+                <a href="#the-problem">The Problem</a>
+                <ul>
+                  <li><a href="#the-solution">The Solution</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#product-highlights">Features</a>
+                <ul>
+                  <li><a href="#historical-odds">Historical Odds</a></li>
+                  <li><a href="#custom-odds">Set Your Own Odds</a></li>
+                  <li><a href="#indicators">Indicators</a></li>
+                </ul>
+              </li>
+              <li><a href="#tech">Tech Stack</a></li>
+              <li><a href="#challenges">Challenges & Learnings</a></li>
+              <li><a href="#whats-next">What’s Next</a></li>
+            </ul>
+        </div>
+      </div>
+      
+
+      <!-- Content -->
+      <div class="content">
+        <h2 id="overview">Overview</h2>
+        <p>
+            An interactive app designed to teach blindfold chess, enhance mental visualization skills through voice commands or clicks. Built with React.js and integrating Speech Recognition API, it allows users to navigate chess pieces across a board without seeing them, offering various game modes, challenges, and customizable settings for a tailored learning experience.
+        </p>
+        
+
+        <h2 id="the-problem">The Problem with Traditional Sportsbooks</h2>
+        <p>
+          Most sportsbooks still function like they did a decade ago. <strong>Static odds</strong>, <strong>zero historical context</strong>, and <strong>no control after bet placement</strong>. Bettors are forced to take what’s offered with little room for strategy. 
+        </p>
+        <p>
+          In a world where trading apps let you tweak every parameter, why does sports betting remain inflexible and opaque?
+        </p>
+        
+        <h2 id="the-solution">A Better Way to Bet</h2>
+        <p>
+          <strong>Nezt Sportsbook</strong> blends the <strong>thrill of sports betting</strong> with the <strong>precision of trading analytics</strong>. It's a platform that gives users control—not just over what they bet on, but <em>how</em> they bet.
+        </p>
+        <ul>
+          <li><strong>Set your own odds</strong> with a Limit Order system</li>
+          <li><strong>Choose expiry types</strong>: Pre-match, Halftime, or Never</li>
+          <li><strong>Visualize historical odds</strong> like a pro trader</li>
+          <li><strong>Cancel your bet</strong> before execution</li>
+        </ul>
+        <p>
+          Nezt gives power back to the user, making betting strategic rather than impulsive.
+        </p>
+        
+        <h2 id="product-highlights">Product Highlights</h2>
+        
+        <h3 id="historical-odds">📊 Historical Odds Visualization</h3>
+        <p>
+          View odds like price action. Nezt lets users access <strong>historical odds data</strong> using <strong>TradingView-style candlestick or line charts</strong>. This helps bettors make informed decisions based on trend analysis—not just gut feeling.
+        </p>
+        
+        <h3 id="custom-odds">🎯 Set Your Own Odds</h3>
+        <p>
+          With our Limit Order system, users define the odds they’re willing to take. If the bookmaker’s odds reach your set level, the bet is executed automatically.
+        </p>
+        <p>
+          Choose when your order expires—<strong>Pre-match</strong>, <strong>Halftime</strong>, or <strong>Never</strong>—or cancel it manually. No more forced commitments on terms you don’t like.
+        </p>
+        
+        <h3 id="indicators">📈 Indicators – Coming Soon</h3>
+        <p>
+          We plan to introduce analytical tools to help users spot trends and evaluate bets with even more precision—an evolution toward data-driven sports betting.
+        </p>
+        
+        <h2 id="tech">Tech Breakdown</h2>
+        <ul>
+          <li><strong>Frontend-only prototype</strong> built with React</li>
+          <li><strong>Mock API</strong> simulates odds, results, and data for testing</li>
+          <li><strong>Redux</strong> handles global state for balance and orders</li>
+          <li><strong>TradingView lightweight charts</strong> (only 45KB!) used to render odds</li>
+        </ul>
+        <p>
+          Historical odds are fetched once and stored in memory, enabling <strong>seamless re-rendering</strong> and chart updates without constant API calls.
+        </p>
+        <p>
+          Try the prototype at: <a href="https://shunab.github.io/Sportsbook/" target="_blank">shunab.github.io/Sportsbook</a>
+        </p>
+        
+        <h2 id="challenges">Challenges & What I Learned</h2>
+        <p>
+          This project was all about frontend depth. Without a backend, everything had to be mocked—<strong>realistic odds, order matching, and state management</strong> had to feel intuitive and smooth. 
+        </p>
+        <p>
+          Integrating <strong>TradingView charts</strong> was a technical challenge but worth it. Keeping the bundle lightweight while adding dynamic charting took trial and error. But once it clicked, the app felt far more professional.
+        </p>
+        <p>
+          The biggest learning curve was <strong>thinking like a user</strong>. Every interaction—from choosing odds to watching charts—had to feel like a trading platform, not just a betting slip.
+        </p>
+        
+        <h2 id="whats-next">What’s Next</h2>
+        <ul>
+          <li>Backend for real data and persistent orders</li>
+          <li>Indicators and overlays on charts</li>
+          <li>Real bet settlement logic and account history</li>
+          <li>Possible mobile-first redesign</li>
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../assets/js/jquery.js"></script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/owl.carousel.js"></script>
+  <script src="../assets/js/gsap.min.js"></script>
+  <script src="../assets/js/ScrollTrigger.min.js"></script>
+  <script src="../assets/js/ScrollToPlugin.min.js"></script>
+  <script src="../assets/js/lightbox.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/ajax-form.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var projectTitles = document.querySelectorAll('.portfolio-item-inner');
+
+      projectTitles.forEach(function(title) {
+        title.addEventListener('click', function() {
+          var description = this.closest('.portfolio-item').querySelector('.project-description');
+          if (description.style.display === 'none' || !description.style.display) {
+            description.style.display = 'block';
+          } else {
+            description.style.display = 'none';
+          }
+        });
+      });
+
+      document.querySelectorAll('.project-description .close-btn').forEach(function(btn) {
+        btn.addEventListener('click', function(event) {
+          event.stopPropagation();
+          this.parentElement.style.display = 'none';
+        });
+      });
+    });
+
+    const video = document.getElementById('yourVideoElementId');
+    if (video) {
+      video.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+      }, { passive: false });
+    }
+  </script>
+</body>
+</html>

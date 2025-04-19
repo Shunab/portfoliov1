@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>betvex</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/images/black.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../assets/css/animate.min.css">
+  <link rel="stylesheet" href="../assets/css/smooth-scrollbar.css">
+  <link rel="stylesheet" href="../assets/css/lightbox.min.css">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/project.css">
+</head>
+<body class="home1-page">
+  <div class="wrapper">
+    <!-- Hero Section -->
+    <img class="hero" src="../assets/images/portfolio7.png" alt="Project Hero">
+
+    <!-- Main Content Section -->
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <a href="../index.html#portfolio" class="back-btn">← Back to Portfolio</a>
+      
+        <div class="sidebar-box">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="https://github.com/vex-labs/vex-frontend" target="_blank">GitHub Repo</a></li>
+            <li><a href="https://devpost.com/software/betvex" target="_blank">Hackathon Submission</a></li>
+            <li><a href="https://www.youtube.com/watch?v=-7H39i4q2ug" target="_blank">Demo Video</a></li>
+        </ul>
+        </div>
+      
+        <div class="sidebar-box">
+            <h3>Contents</h3>
+            <ul>
+              <li><a href="#betvex">Project Overview</a></li>
+              <li>
+                <a href="#problem">The Problem</a>
+                <ul>
+                  <li><a href="#solution">The Solution</a></li>
+                </ul>
+              </li>
+              <li><a href="#my-role">My Role</a></li>
+              <li>
+                <a href="#features">Features</a>
+                <ul>
+                  <li><a href="#profit-sharing">Profit Sharing</a></li>
+                  <li><a href="#limit-betting">Parimutuel Betting</a></li>
+                  <li><a href="#account-abstraction">Gasless UX</a></li>
+                  <li><a href="#staking-ui">Staking</a></li>
+                  <li><a href="#swap-and-faucet">Swap & Faucet</a></li>
+                </ul>
+              </li>
+              <li><a href="#hackathon-scope">Hackathon Scope</a></li>
+              <li><a href="#technical">Technical Architecture</a></li>
+              <li><a href="#challenges">Challenges & Reflections</a></li>
+              <li><a href="#whats-next">What’s Next</a></li>
+            </ul>
+          </div>
+      </div>
+      
+
+      <!-- Content -->
+      <div class="content">
+        
+
+<h2 id="problem">The Problem: High Fees and Centralized Friction</h2>
+<p>
+  Esports betting is a growing market, but the infrastructure behind it is outdated and user-hostile. Platforms regularly charge <strong>fees as high as 8%</strong>, delay withdrawals for <strong>3–5 days</strong>, and operate as closed systems with <strong>zero transparency</strong>. Most are bolt-ons to traditional sportsbooks—not built for the digital-native esports audience.
+</p>
+<p>
+  These inefficiencies create an experience that’s ripe for disruption—especially by a product that understands both <strong>crypto-native tech</strong> and the <strong>esports betting culture</strong>.
+</p>
+
+<h2 id="solution">The Solution: A DAO-Driven Betting Protocol</h2>
+<p>
+  <strong>Betvex</strong> is a community-powered esports betting dApp designed to offer <strong>low-fee, transparent, and decentralized wagering</strong>. It uses a custom parimutuel betting model and profit-sharing mechanics to ensure that platform value is returned to users—not extracted.
+</p>
+<p>
+  The protocol also abstracts away Web3 complexity, using smart onboarding and gasless transactions to create a smooth, Web2-like experience while maintaining the self-custody and composability of Web3.
+</p>
+
+<h2 id="my-role">My Role: Frontend & Backend Developer</h2>
+<p>
+  I was responsible for both the <strong>frontend and backend systems</strong> of the platform, collaborating with two smart contract engineers. My contributions spanned across:
+</p>
+<ul>
+  <li>Architecting the frontend for match display, betting, staking, and rewards</li>
+  <li>Integrating smart contracts with the UI for seamless dApp interactions</li>
+  <li>Building and maintaining the backend API for match data and media</li>
+  <li>Implementing in-app swaps and faucets to enhance user flow</li>
+</ul>
+
+
+<h2 id="features">Feature Highlights</h2>
+
+<h3 id="profit-sharing">💸 Profit-Sharing & Staking System</h3>
+<p>
+  When bets are profitable, winnings are used to <strong>buy back $VEX tokens</strong> and redistribute them to stakers. If there's a shortfall, a dynamic <strong>$USDC insurance pool</strong> kicks in. Overflow losses are covered proportionally by stakers—aligning incentives between platform and community.
+</p>
+
+<h3 id="limit-betting">🎯 Parimutuel Betting System</h3>
+<p>
+  Bets are pooled, and winnings are distributed among correct bettors. This allows for <strong>lower fees</strong> and eliminates the need for liquidity providers or market makers.
+</p>
+
+<h3 id="account-abstraction">🔐 Gasless, Seamless UX</h3>
+<p>
+  Using account abstraction and relayers, users can <strong>onboard with no wallet or gas</strong>. They receive a VEX account by default, and all actions—from betting to staking—are gas-free.
+</p>
+
+<h3 id="staking-ui">📈 Staking Interface + Claim Flow</h3>
+<p>
+  Users can stake, unstake, and claim rewards via a frontend built for simplicity. There's also a redistribution function that lets any user help decentralize reward payouts by pushing updated rewards to all stakers.
+</p>
+
+<h3 id="swap-and-faucet">🔁 Swap and Testnet Faucet</h3>
+<p>
+  An integrated swap lets users convert $USDC and $VEX. A testnet faucet allows new users to immediately try the platform—no tokens needed in advance.
+</p>
+
+<h2 id="hackathon-scope">Hackathon Scope</h2>
+<p>
+  This project was submitted as part of a Web3 hackathon. Our team significantly expanded the platform during the event. Key contributions during the hackathon:
+</p>
+<ul>
+  <li>Built a reusable smart contract staking and rewards system</li>
+  <li>Deployed an <strong>image + data API backend</strong> for match visualization</li>
+  <li>Improved the frontend to support all core actions—betting, claiming, staking, swapping</li>
+  <li>Refactored onboarding logic into an open-source library built on <code>near-api-js</code></li>
+  <li>Developed sub-account recovery and a reference <code>ref-finance</code> swap integration</li>
+</ul>
+
+<h2 id="technical">Technical Architecture</h2>
+<ul>
+  <li><strong>Frontend:</strong> React.js, connected to NEAR contracts</li>
+  <li><strong>State:</strong> Managed via local/global hooks and contract reads</li>
+  <li><strong>Backend:</strong> Node.js + Express API for match/media data</li>
+  <li><strong>Smart Contracts:</strong> Built by teammates, interacted via NEAR bindings</li>
+  <li><strong>Wallet/Onboarding:</strong> Account abstraction, no direct wallet connection required</li>
+</ul>
+
+<h2 id="challenges">Challenges & Reflections</h2>
+<p>
+  The biggest challenge was making the <strong>frontend feel seamless</strong> while integrating with smart contracts that were still being finalized.
+</p>
+<p>
+  Since we were pushing for a <strong>Web2-quality UX</strong> with Web3 rails, we had to abstract complexity without hiding functionality. It meant rapidly iterating on UI flows, fallback states, and error handling—while also writing backend code to support media rendering, swaps, and testnet access.
+</p>
+<p>
+  This was also my first time deeply integrating a staking and redistribution system in a dApp—balancing clean UX with complex backend logic.
+</p>
+
+<h2 id="whats-next">What’s Next</h2>
+<p>
+  While I’m no longer part of the team, the roadmap (as outlined during submission) included:
+</p>
+<ul>
+  <li>Adding a DAO with stake-weighted governance</li>
+  <li>Moving to zk oracles for match resolution and odds verification</li>
+  <li>Adding cross-chain support and zkLogin via email or password</li>
+  <li>Expanding betting markets to support polymarket-like bets</li>
+  <li>Integrating copy betting with signature delegation</li>
+</ul>
+<p>
+    The team is also planning a fundraising round in early 2025 to scale the platform further.
+  </p>
+
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../assets/js/jquery.js"></script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/owl.carousel.js"></script>
+  <script src="../assets/js/gsap.min.js"></script>
+  <script src="../assets/js/ScrollTrigger.min.js"></script>
+  <script src="../assets/js/ScrollToPlugin.min.js"></script>
+  <script src="../assets/js/lightbox.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/ajax-form.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var projectTitles = document.querySelectorAll('.portfolio-item-inner');
+
+      projectTitles.forEach(function(title) {
+        title.addEventListener('click', function() {
+          var description = this.closest('.portfolio-item').querySelector('.project-description');
+          if (description.style.display === 'none' || !description.style.display) {
+            description.style.display = 'block';
+          } else {
+            description.style.display = 'none';
+          }
+        });
+      });
+
+      document.querySelectorAll('.project-description .close-btn').forEach(function(btn) {
+        btn.addEventListener('click', function(event) {
+          event.stopPropagation();
+          this.parentElement.style.display = 'none';
+        });
+      });
+    });
+
+    const video = document.getElementById('yourVideoElementId');
+    if (video) {
+      video.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+      }, { passive: false });
+    }
+  </script>
+</body>
+</html>

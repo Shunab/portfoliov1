@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Avility</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/images/black.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../assets/css/animate.min.css">
+  <link rel="stylesheet" href="../assets/css/smooth-scrollbar.css">
+  <link rel="stylesheet" href="../assets/css/lightbox.min.css">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/project.css">
+</head>
+<body class="home1-page">
+  <div class="wrapper">
+    <!-- Hero Section -->
+    <img class="hero" src="../assets/images/Frame_1.png" alt="Project Hero">
+
+    <!-- Main Content Section -->
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <a href="../index.html#portfolio" class="back-btn">← Back to Portfolio</a>
+      
+        <div class="sidebar-box">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="https://github.com/Shunab" target="_blank">GitHub Repo</a></li>
+            <li><a href="https://t.me/AvailityBot" target="_blank">Telegram Demo</a></li>
+          </ul>
+        </div>
+      
+        <div class="sidebar-box">
+            <h3>Contents</h3>
+            <ul>
+              <li><a href="#availity">Project Overview</a></li>
+              <li>
+                <a href="#problem">The Problem</a>
+                <ul>
+                  <li><a href="#solution">The Solution</a></li>
+                </ul>
+              </li>
+              <li><a href="#my-role">My Role</a></li>
+              <li>
+                <a href="#features">Key Features</a>
+                <ul>
+                  <li><a href="#nlp-parsing">Availability Parsing</a></li>
+                  <li><a href="#abstracted-management">User-Friendly Management</a></li>
+                  <li><a href="#shift-confirmation">Shift Confirmation</a></li>
+                  <li><a href="#unified-confirmation">Unified Confirmation</a></li>
+                </ul>
+              </li>
+              <li><a href="#architecture">Architecture</a></li>
+              <li><a href="#nlp">NLP Usage</a></li>
+              <li><a href="#debugging">Testing & Debugging</a></li>
+              <li><a href="#migration">WhatsApp Migration</a></li>
+              <li><a href="#status">Current Status</a></li>
+            </ul>
+          </div>
+          
+      </div>
+      
+
+      <!-- Content -->
+      <div class="content">
+        <h1 id="availity">🗓️ Availity — A Chat-Based Scheduling Assistant</h1>
+
+<h2 id="problem">The Problem: Scheduling is Still Broken</h2>
+<p>
+  Even in 2025, coordinating availability and shifts in small teams often comes down to spreadsheets, chaotic group chats, or endless back-and-forth messages. Traditional scheduling tools feel heavy-handed for casual or temporary coordination.
+</p>
+<p>
+  There’s room for something lighter: a <strong>conversational assistant</strong> that can handle availability, shift assignments, and confirmations—all through chat.
+</p>
+
+<h2 id="solution">The Solution: Scheduling via Natural Language</h2>
+<p>
+  <strong>Availity</strong> is a bot-based scheduling assistant that lets users manage their availability and confirm shift assignments using natural language over Telegram (and soon WhatsApp).
+</p>
+<p>
+  The goal is simplicity: let users type things like “I’m free after 3pm Friday” or “cancel Thursday” and have the system handle parsing, storage, matching, and assignment—all behind the scenes.
+</p>
+
+<h2 id="my-role">My Role: Solo Developer</h2>
+<p>
+  I designed and built the entire system—from NLP handling to database logic to bot interactions. The focus was on creating a lightweight but robust scheduling solution that balances:
+</p>
+<ul>
+  <li>Natural language UX</li>
+  <li>Modular, maintainable architecture</li>
+  <li>Platform-agnostic design (Telegram → WhatsApp)</li>
+</ul>
+
+<h2 id="features">Key Features</h2>
+
+<h3 id="nlp-parsing">🧠 Natural Language Availability Parsing</h3>
+<p>
+  Users submit messages like:
+</p>
+<ul>
+  <li>“I’m free on Friday after 3pm”</li>
+  <li>“Available all day Monday”</li>
+</ul>
+<p>
+  These are parsed into structured time slots using <strong>Perplexity AI</strong> via custom prompts, and stored in Supabase with <code>start_timestamp</code> and <code>end_timestamp</code>.
+</p>
+
+<h3 id="abstracted-management">📋 Abstracted Availability Management</h3>
+<p>
+  Users can manage their availability with simple commands like:
+</p>
+<ul>
+  <li>“manage my availability”</li>
+  <li>“cancel Thursday”</li>
+  <li>“cancel 2”</li>
+</ul>
+<p>
+  The system abstracts away internal UUIDs and maps entries to temporary numeric labels (1, 2, etc.). Cancellations are resolved using <strong>index mapping</strong> or <strong>fuzzy matching</strong> via NLP.
+</p>
+
+<h3 id="shift-confirmation">✅ Shift Assignment & Confirmation</h3>
+<p>
+  Admins or automated logic can assign shifts based on a user’s availability. Users receive a message like:
+</p>
+<pre>
+📢 You've been assigned a shift!
+🕒 Shift: 08:30 to 10:30 (UTC)
+✅ Reply with "confirm" to this message to confirm your availability.
+</pre>
+<p>
+  Replies update a <code>mock_assignments</code> table and change status from <code>pending</code> to <code>confirmed</code>, tracked by message ID.
+</p>
+
+<h3 id="unified-confirmation">🧩 Unified Confirmation Handling</h3>
+<p>
+  The same “confirm” message handles both availability submissions and shift confirmations, depending on context. Fallback behavior ensures no user confusion when no pending action is tied to the message.
+</p>
+
+<h2 id="architecture">Tech Architecture</h2>
+
+<table>
+  <thead>
+    <tr><th>Component</th><th>Tech Stack</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Bot Framework</td><td>python-telegram-bot</td></tr>
+    <tr><td>Future Platform</td><td>Meta WhatsApp Cloud API</td></tr>
+    <tr><td>Backend DB</td><td>Supabase (PostgreSQL)</td></tr>
+    <tr><td>NLP Engine</td><td>Perplexity AI via custom prompts</td></tr>
+    <tr><td>Runtime</td><td>Python with async handlers</td></tr>
+  </tbody>
+</table>
+
+
+<h2 id="nlp">NLP in Action</h2>
+<p>
+  Perplexity is used in two main ways:
+</p>
+<ul>
+  <li><strong>Intent detection</strong> — understands whether a message is adding, managing, or cancelling availability</li>
+  <li><strong>Slot matching</strong> — matches fuzzy input like “cancel Thursday” against structured availability entries</li>
+</ul>
+<p>
+  If Perplexity fails or returns verbose outputs, fallback keyword detection ensures consistent behavior.
+</p>
+
+<h2 id="debugging">Testing & Debugging</h2>
+<p>
+  Internal states (e.g. <code>user_states</code>), parsed outputs, and NLP logs are printed for debugging. This has helped catch cases like:
+</p>
+<ul>
+  <li>UUID exposure</li>
+  <li>Invalid cancellation attempts</li>
+  <li>Ambiguity with the word “confirm”</li>
+</ul>
+
+<h2 id="migration">WhatsApp Migration Ready</h2>
+<p>
+  The bot is built to migrate seamlessly to WhatsApp via Meta’s Cloud API:
+</p>
+<ul>
+  <li>Telegram SDK would be swapped for FastAPI + Webhook handlers</li>
+  <li>All message logic is already abstracted from platform-specific calls</li>
+  <li>NLP, DB, and confirmation logic remain unchanged</li>
+</ul>
+<p>
+  This keeps the core logic untouched and enables scaling across platforms.
+</p>
+
+<h2 id="status">Current Status</h2>
+<ul>
+  <li>✅ Natural language parsing and availability storage</li>
+  <li>✅ Abstracted availability management</li>
+  <li>✅ Cancel via fuzzy match or index</li>
+  <li>✅ Shift assignment with confirmation system</li>
+  <li>✅ Unified confirmation logic</li>
+  <li>✅ Telegram deployed and WhatsApp-ready</li>
+</ul>
+
+
+     </div>
+
+  <!-- Scripts -->
+  <script src="../assets/js/jquery.js"></script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/owl.carousel.js"></script>
+  <script src="../assets/js/gsap.min.js"></script>
+  <script src="../assets/js/ScrollTrigger.min.js"></script>
+  <script src="../assets/js/ScrollToPlugin.min.js"></script>
+  <script src="../assets/js/lightbox.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/ajax-form.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var projectTitles = document.querySelectorAll('.portfolio-item-inner');
+
+      projectTitles.forEach(function(title) {
+        title.addEventListener('click', function() {
+          var description = this.closest('.portfolio-item').querySelector('.project-description');
+          if (description.style.display === 'none' || !description.style.display) {
+            description.style.display = 'block';
+          } else {
+            description.style.display = 'none';
+          }
+        });
+      });
+
+      document.querySelectorAll('.project-description .close-btn').forEach(function(btn) {
+        btn.addEventListener('click', function(event) {
+          event.stopPropagation();
+          this.parentElement.style.display = 'none';
+        });
+      });
+    });
+
+    const video = document.getElementById('yourVideoElementId');
+    if (video) {
+      video.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+      }, { passive: false });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tweefilter</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/images/black.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../assets/css/animate.min.css">
+  <link rel="stylesheet" href="../assets/css/smooth-scrollbar.css">
+  <link rel="stylesheet" href="../assets/css/lightbox.min.css">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/project.css">
+</head>
+<body class="home1-page">
+  <div class="wrapper">
+    <!-- Hero Section -->
+    <img class="hero" src="../assets/images/portfolio7.png" alt="Project Hero">
+
+    <!-- Main Content Section -->
+    <div class="container">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <a href="../index.html#portfolio" class="back-btn">← Back to Portfolio</a>
+      
+        <div class="sidebar-box">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="https://github.com/Shunab" target="_blank">GitHub Repo</a></li>
+            
+          </ul>
+        </div>
+      
+        <div class="sidebar-box">
+            <h3>Contents</h3>
+            <ul>
+              <li><a href="#tweefilter">Project Overview</a></li>
+              <li>
+                <a href="#problem">The Problem</a>
+                <ul>
+                  <li><a href="#solution">The Solution</a></li>
+                </ul>
+              </li>
+              <li><a href="#my-role">My Role</a></li>
+              <li>
+                <a href="#features">Features</a>
+                <ul>
+                  <li><a href="#tweet-ingestion">Tweet Ingestion</a></li>
+                  <li><a href="#nlp-filtering">NLP Filtering</a></li>
+                  <li><a href="#storage">Structured Storage</a></li>
+                </ul>
+              </li>
+              <li><a href="#tech-architecture">Tech Stack</a></li>
+              <li><a href="#status">Current Status</a></li>
+            </ul>
+          </div>
+          
+          
+      </div>
+      
+
+      <!-- Content -->
+      <div class="content">
+        <h1 id="tweefilter">📊 Tweefilter — Lightweight Tweet Filtering for Market Sentiment</h1>
+
+<h2 id="problem">The Problem: Financial Twitter Is Noisy</h2>
+<p>
+  Financial Twitter is one of the fastest-moving sources of market sentiment, but it’s also full of noise. Traders looking for real-time signals often have to wade through low-value content, spam, or irrelevant posts—wasting time and missing key shifts in sentiment.
+</p>
+<p>
+  Existing tools are either too expensive, too broad, or not built with actionable filtering in mind.
+</p>
+
+<h2 id="solution">The Solution: Simple, Targeted Filtering</h2>
+<p>
+  <strong>Tweefilter</strong> is a lightweight tweet filtering system designed to <strong>capture and analyze market-relevant tweets</strong> using NLP. It parses incoming tweets, scores them for relevance and sentiment, and stores the most useful ones in a structured format—ready for use in trading workflows.
+</p>
+<p>
+  Built for cost-efficiency and speed, the system relies on IFTTT instead of the Twitter API, removing rate limits and credential management from the equation.
+</p>
+
+<h2 id="my-role">My Role: Solo Developer</h2>
+<p>
+  I designed and built Tweefilter end to end, focusing on:
+</p>
+<ul>
+  <li>Cost-efficient tweet ingestion via IFTTT</li>
+  <li>Prompt-based NLP filtering using OpenAI</li>
+  <li>Sentiment tagging and relevancy scoring</li>
+  <li>Structured storage in Google Sheets for easy access</li>
+</ul>
+
+<h2 id="features">Key Features</h2>
+
+<h3 id="tweet-ingestion">📥 Tweet Ingestion via IFTTT</h3>
+<p>
+  Instead of relying on the Twitter API, Tweefilter uses <strong>IFTTT webhooks</strong> to pull tweets in real-time based on keyword filters. This keeps the system free of authentication limits and avoids the cost overhead of premium API access.
+</p>
+
+<h3 id="nlp-filtering">🧠 NLP-Based Filtering</h3>
+<p>
+  Incoming tweets are passed through the <strong>OpenAI API</strong>, which extracts sentiment, identifies tickers or market terms, and evaluates whether the tweet is useful for a trader. Tweets are scored and classified based on custom prompts designed around market context.
+</p>
+
+<h3 id="storage">📄 Structured Output to Google Sheets</h3>
+<p>
+  Only high-confidence tweets are stored in a connected Google Sheet. Each row includes:
+</p>
+<ul>
+  <li>Tweet text</li>
+  <li>Extracted tickers/keywords</li>
+  <li>Sentiment (positive, negative, neutral)</li>
+  <li>Relevancy score</li>
+  <li>Timestamp</li>
+</ul>
+<p>
+  This setup makes the results easy to scan, reference, or integrate into broader trading systems.
+</p>
+
+<h2 id="tech-architecture">Tech Stack</h2>
+<ul>
+  <li><strong>IFTTT Webhooks:</strong> For tweet ingestion</li>
+  <li><strong>Python
+
+
+
+     </div>
+
+  <!-- Scripts -->
+  <script src="../assets/js/jquery.js"></script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/owl.carousel.js"></script>
+  <script src="../assets/js/gsap.min.js"></script>
+  <script src="../assets/js/ScrollTrigger.min.js"></script>
+  <script src="../assets/js/ScrollToPlugin.min.js"></script>
+  <script src="../assets/js/lightbox.min.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/ajax-form.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var projectTitles = document.querySelectorAll('.portfolio-item-inner');
+
+      projectTitles.forEach(function(title) {
+        title.addEventListener('click', function() {
+          var description = this.closest('.portfolio-item').querySelector('.project-description');
+          if (description.style.display === 'none' || !description.style.display) {
+            description.style.display = 'block';
+          } else {
+            description.style.display = 'none';
+          }
+        });
+      });
+
+      document.querySelectorAll('.project-description .close-btn').forEach(function(btn) {
+        btn.addEventListener('click', function(event) {
+          event.stopPropagation();
+          this.parentElement.style.display = 'none';
+        });
+      });
+    });
+
+    const video = document.getElementById('yourVideoElementId');
+    if (video) {
+      video.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+      }, { passive: false });
+    }
+  </script>
+</body>
+</html>
