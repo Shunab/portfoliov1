@@ -45,174 +45,173 @@
         </div>
       
         <div class="sidebar-box">
-            <h3>Contents</h3>
-            <ul>
-              <li><a href="#availity">Project Overview</a></li>
-              <li>
-                <a href="#problem">The Problem</a>
-                <ul>
-                  <li><a href="#solution">The Solution</a></li>
-                </ul>
-              </li>
-              <li><a href="#my-role">My Role</a></li>
-              <li>
-                <a href="#features">Key Features</a>
-                <ul>
-                  <li><a href="#nlp-parsing">Availability Parsing</a></li>
-                  <li><a href="#abstracted-management">User-Friendly Management</a></li>
-                  <li><a href="#shift-confirmation">Shift Confirmation</a></li>
-                  <li><a href="#unified-confirmation">Unified Confirmation</a></li>
-                </ul>
-              </li>
-              <li><a href="#architecture">Architecture</a></li>
-              <li><a href="#nlp">NLP Usage</a></li>
-              <li><a href="#debugging">Testing & Debugging</a></li>
-              <li><a href="#migration">WhatsApp Migration</a></li>
-              <li><a href="#status">Current Status</a></li>
-            </ul>
-          </div>
+  <h3>Contents</h3>
+  <ul>
+    <li><a href="#availity">Project Overview</a></li>
+    <li>
+      <a href="#problem">The Problem</a>
+      <ul>
+        <li><a href="#solution">The Solution</a></li>
+      </ul>
+    </li>
+    <li><a href="#my-role">My Role</a></li>
+    <li>
+      <a href="#features">Key Features</a>
+      <ul>
+        <li><a href="#nlp-parsing">Availability Parsing</a></li>
+        <li><a href="#abstracted-management">User-Friendly Management</a></li>
+        <li><a href="#shift-confirmation">Shift Confirmation</a></li>
+        <li><a href="#unified-confirmation">Unified Confirmation</a></li>
+      </ul>
+    </li>
+    <li><a href="#architecture">Architecture</a></li>
+    <li><a href="#nlp">NLP in Action</a></li>
+    <li><a href="#debugging">Testing & Debugging</a></li>
+    <li><a href="#status">Current Status</a></li>
+  </ul>
+</div>
+
           
       </div>
       
 
       <!-- Content -->
       <div class="content">
-        <h1 id="availity">🗓️ Availity — A Chat-Based Scheduling Assistant</h1>
+  <h1 id="availity">🗓️ Availity — A Chat-Based Scheduling Assistant</h1>
 
-<h2 id="problem">The Problem: Scheduling is Still Broken</h2>
-<p>
-  Even in 2025, coordinating availability and shifts in small teams often comes down to spreadsheets, chaotic group chats, or endless back-and-forth messages. Traditional scheduling tools feel heavy-handed for casual or temporary coordination.
-</p>
-<p>
-  There’s room for something lighter: a <strong>conversational assistant</strong> that can handle availability, shift assignments, and confirmations—all through chat.
-</p>
+  <h2 id="problem">The Problem: The Messy Reality of Scheduling</h2>
+  <p>
+    Even in 2025, coordinating availability and shifts—especially in small teams—often relies on chaotic group chats, messy spreadsheets, or slow back-and-forth messages. Most scheduling tools feel too bulky for lightweight, ad hoc coordination.
+  </p>
+  <p>
+    There’s space for something more intuitive: a <strong>conversational AI assistant</strong> that handles availability, cancellations, and shift confirmations—all through the simplicity of chat.
+  </p>
 
-<h2 id="solution">The Solution: Scheduling via Natural Language</h2>
-<p>
-  <strong>Availity</strong> is a bot-based scheduling assistant that lets users manage their availability and confirm shift assignments using natural language over Telegram (and soon WhatsApp).
-</p>
-<p>
-  The goal is simplicity: let users type things like “I’m free after 3pm Friday” or “cancel Thursday” and have the system handle parsing, storage, matching, and assignment—all behind the scenes.
-</p>
+  <h2 id="solution">The Solution: Scheduling via Natural Language</h2>
+  <p>
+    <strong>Availity</strong> is an AI-powered chat assistant that helps users manage availability and confirm shifts using natural language. It's built to run on messaging platforms—currently live on <strong>Telegram</strong>, and fully compatible with WhatsApp.
+  </p>
+  <p>
+    The goal: let users type things like “free after lunch on Friday” or “cancel Monday” and have the system handle everything—parsing, storage, matching, and notification—behind the scenes.
+  </p>
 
-<h2 id="my-role">My Role: Solo Developer</h2>
-<p>
-  I designed and built the entire system—from NLP handling to database logic to bot interactions. The focus was on creating a lightweight but robust scheduling solution that balances:
-</p>
-<ul>
-  <li>Natural language UX</li>
-  <li>Modular, maintainable architecture</li>
-  <li>Platform-agnostic design (Telegram → WhatsApp)</li>
-</ul>
+  <h2 id="my-role">My Role: Solo Developer</h2>
+  <p>
+    I designed and built the entire system—from the natural language parser and database schema to bot logic and real-time interaction. The goal was to build a lightweight, intuitive scheduling tool that combines:
+  </p>
+  <ul>
+    <li>Natural language UX</li>
+    <li>Clean, modular architecture</li>
+    <li>Cross-platform support</li>
+  </ul>
 
-<h2 id="features">Key Features</h2>
+  <h2 id="features">Key Features</h2>
 
-<h3 id="nlp-parsing">🧠 Natural Language Availability Parsing</h3>
-<p>
-  Users submit messages like:
-</p>
-<ul>
-  <li>“I’m free on Friday after 3pm”</li>
-  <li>“Available all day Monday”</li>
-</ul>
-<p>
-  These are parsed into structured time slots using <strong>Perplexity AI</strong> via custom prompts, and stored in Supabase with <code>start_timestamp</code> and <code>end_timestamp</code>.
-</p>
+  <h3 id="nlp-parsing">🧠 Natural Language Availability Parsing</h3>
+  <p>
+    Users can casually message the bot with things like:
+  </p>
+  <ul>
+    <li>“free Friday all day”</li>
+    <li>“I’m available after 2pm Tuesday”</li>
+  </ul>
+  <p>
+    These inputs are parsed into structured time slots using <strong>Perplexity AI</strong> and stored in Supabase with precise timestamps.
+  </p>
 
-<h3 id="abstracted-management">📋 Abstracted Availability Management</h3>
-<p>
-  Users can manage their availability with simple commands like:
-</p>
-<ul>
-  <li>“manage my availability”</li>
-  <li>“cancel Thursday”</li>
-  <li>“cancel 2”</li>
-</ul>
-<p>
-  The system abstracts away internal UUIDs and maps entries to temporary numeric labels (1, 2, etc.). Cancellations are resolved using <strong>index mapping</strong> or <strong>fuzzy matching</strong> via NLP.
-</p>
+  <h3 id="abstracted-management">📋 Abstracted Availability Management</h3>
+  <p>
+    Users can ask to review and edit their availability with messages like:
+  </p>
+  <ul>
+    <li>“what have I added?”</li>
+    <li>“cancel my availability on Thursday”</li>
+    <li>“I am not available to work on Tuesday”</li>
+  </ul>
+  <p>
+    Entries are shown with simple numbered labels (1, 2, etc.), and cancellation works through either number selection or fuzzy NLP matching.
+  </p>
 
-<h3 id="shift-confirmation">✅ Shift Assignment & Confirmation</h3>
-<p>
-  Admins or automated logic can assign shifts based on a user’s availability. Users receive a message like:
-</p>
-<pre>
-📢 You've been assigned a shift!
-🕒 Shift: 08:30 to 10:30 (UTC)
-✅ Reply with "confirm" to this message to confirm your availability.
-</pre>
-<p>
-  Replies update a <code>mock_assignments</code> table and change status from <code>pending</code> to <code>confirmed</code>, tracked by message ID.
-</p>
+  <h3 id="shift-confirmation">✅ Shift Assignment & Confirmation</h3>
+  <p>
+    The system can assign shifts based on user availability. A typical message looks like:
+  </p>
+  <pre>
+📢 You’ve been assigned a shift!
+🕒 Shift: Friday 14:00–18:00 (UTC)
+✅ Reply with "confirm" to lock it in.
+  </pre>
+  <p>
+    When users reply, the shift is marked as confirmed in the database, tracked via message ID.
+  </p>
 
-<h3 id="unified-confirmation">🧩 Unified Confirmation Handling</h3>
-<p>
-  The same “confirm” message handles both availability submissions and shift confirmations, depending on context. Fallback behavior ensures no user confusion when no pending action is tied to the message.
-</p>
+  <h3 id="unified-confirmation">🧩 Unified Confirmation Handling</h3>
+  <p>
+    A single "confirm" message handles both:
+  </p>
+  <ul>
+    <li>Saving newly added availability</li>
+    <li>Confirming assigned shifts (via message reply)</li>
+  </ul>
+  <p>
+    If a user sends "confirm" with no pending context, the assistant gently explains that there's nothing to confirm. This avoids confusion and keeps the flow smooth.
+  </p>
 
-<h2 id="architecture">Tech Architecture</h2>
+  <h2 id="architecture">Tech Architecture</h2>
+  <table>
+    <thead>
+      <tr><th>Component</th><th>Tech Stack</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Bot Framework</td><td>python-telegram-bot</td></tr>
+      <tr><td>Messaging Platform</td><td>Telegram (WhatsApp compatible)</td></tr>
+      <tr><td>Backend DB</td><td>Supabase (PostgreSQL)</td></tr>
+      <tr><td>NLP Engine</td><td>Perplexity AI with custom prompts</td></tr>
+      <tr><td>Runtime</td><td>Python with async handlers</td></tr>
+    </tbody>
+  </table>
 
-<table>
-  <thead>
-    <tr><th>Component</th><th>Tech Stack</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Bot Framework</td><td>python-telegram-bot</td></tr>
-    <tr><td>Future Platform</td><td>Meta WhatsApp Cloud API</td></tr>
-    <tr><td>Backend DB</td><td>Supabase (PostgreSQL)</td></tr>
-    <tr><td>NLP Engine</td><td>Perplexity AI via custom prompts</td></tr>
-    <tr><td>Runtime</td><td>Python with async handlers</td></tr>
-  </tbody>
-</table>
+  <h2 id="nlp">NLP in Action</h2>
+  <p>
+    Perplexity is used for two core functions:
+  </p>
+  <ul>
+    <li><strong>Intent detection</strong> — understands if the user is trying to add, manage, or cancel availability</li>
+    <li><strong>Slot matching</strong> — intelligently selects the correct entry when the user says something like “cancel Monday”</li>
+  </ul>
+  <p>
+    If the model returns verbose or ambiguous output, fallback keyword detection ensures reliability.
+  </p>
 
+  <h2 id="debugging">Testing & Debugging</h2>
+  <p>
+    I implemented detailed internal logging for:
+  </p>
+  <ul>
+    <li>User intent and state</li>
+    <li>Availability parsing output</li>
+    <li>Perplexity prompt debugging</li>
+  </ul>
+  <p>
+    This helped catch and resolve issues like:
+  </p>
+  <ul>
+    <li>Incorrect UUID exposure</li>
+    <li>Failed cancel attempts due to vague input</li>
+    <li>Ambiguous use of "confirm"</li>
+  </ul>
 
-<h2 id="nlp">NLP in Action</h2>
-<p>
-  Perplexity is used in two main ways:
-</p>
-<ul>
-  <li><strong>Intent detection</strong> — understands whether a message is adding, managing, or cancelling availability</li>
-  <li><strong>Slot matching</strong> — matches fuzzy input like “cancel Thursday” against structured availability entries</li>
-</ul>
-<p>
-  If Perplexity fails or returns verbose outputs, fallback keyword detection ensures consistent behavior.
-</p>
+  <h2 id="status">Current Status</h2>
+  <ul>
+    <li>✅ Natural language availability parsing</li>
+    <li>✅ Abstracted list & cancel interface</li>
+    <li>✅ Shift assignment with confirmation</li>
+    <li>✅ Unified confirm/cancel handling</li>
+    <li>✅ Fully functional on Telegram</li>
+    <li>✅ Designed for plug-and-play WhatsApp support</li>
+  </ul>
+</div>
 
-<h2 id="debugging">Testing & Debugging</h2>
-<p>
-  Internal states (e.g. <code>user_states</code>), parsed outputs, and NLP logs are printed for debugging. This has helped catch cases like:
-</p>
-<ul>
-  <li>UUID exposure</li>
-  <li>Invalid cancellation attempts</li>
-  <li>Ambiguity with the word “confirm”</li>
-</ul>
-
-<h2 id="migration">WhatsApp Migration Ready</h2>
-<p>
-  The bot is built to migrate seamlessly to WhatsApp via Meta’s Cloud API:
-</p>
-<ul>
-  <li>Telegram SDK would be swapped for FastAPI + Webhook handlers</li>
-  <li>All message logic is already abstracted from platform-specific calls</li>
-  <li>NLP, DB, and confirmation logic remain unchanged</li>
-</ul>
-<p>
-  This keeps the core logic untouched and enables scaling across platforms.
-</p>
-
-<h2 id="status">Current Status</h2>
-<ul>
-  <li>✅ Natural language parsing and availability storage</li>
-  <li>✅ Abstracted availability management</li>
-  <li>✅ Cancel via fuzzy match or index</li>
-  <li>✅ Shift assignment with confirmation system</li>
-  <li>✅ Unified confirmation logic</li>
-  <li>✅ Telegram deployed and WhatsApp-ready</li>
-</ul>
-
-
-     </div>
 
   <!-- Scripts -->
   <script src="../assets/js/jquery.js"></script>
